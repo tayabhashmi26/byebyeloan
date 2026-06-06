@@ -64,7 +64,7 @@ export default function Services() {
           {SERVICES.map(({ icon: Icon, title, description, badge, badgeColor }) => (
             <article
               key={title}
-              className="relative rounded-2xl border border-gray-100 p-8 hover:border-[#006633]/30 hover:shadow-xl transition-all duration-300 group stat-card bg-white"
+              className="service-card relative rounded-2xl border border-gray-100/80 p-8 hover:border-[#006633]/30 transition-all duration-300 group bg-white"
             >
               {/* Badge */}
               <span

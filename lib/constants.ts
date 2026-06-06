@@ -16,20 +16,19 @@ export const WHATSAPP_MESSAGE =
   'Assalam o Alaikum! Mujhe apna loan clear karna hai. Please meri help karein.';
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-// Loan apps we clear
+// Loan apps we clear — corrected & complete list
 export const LOAN_APPS = [
-  { name: 'Smart Qarza', color: '#006633' },
-  { name: 'Paisayaar', color: '#007a40' },
-  { name: 'Foricash', color: '#004d26' },
-  { name: 'QarzMitra', color: '#006633' },
-  { name: 'LudoLoan', color: '#007a40' },
-  { name: 'EasyLoan', color: '#004d26' },
-  { name: 'UpLoan', color: '#006633' },
-  { name: 'PakCredit', color: '#007a40' },
-  { name: 'HakeemApp', color: '#004d26' },
-  { name: 'DairaApp', color: '#006633' },
-  { name: 'PaysaGhur', color: '#007a40' },
-  { name: 'MoneyTab', color: '#004d26' },
+  // Group 1: Direct Loan Apps
+  'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem', 'Daira', 'Sahara',
+  'Fauri Cash', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar',
+  'PaisaGhar', 'QarzMitra',
+  // Group 2: Fintech, BNPL & Digital Credit
+  'Abhi', 'ZoodPay', 'ZoodMall', 'Muawin', 'Qist Bazaar', 'Tijara',
+  'Edufi', 'Taleem Connect', 'Neem Paymenow', 'Nova Finance', 'Viva Finance',
+  'Baadmay', 'Alif Shop',
+  // Group 3: Mobile Wallets & Microfinance
+  'Easypaisa', 'JazzCash', 'HBL Microfinance', 'Zindigi',
+  'Konnect by HBL', 'DOST',
 ];
 
 // Pakistani banks we cover

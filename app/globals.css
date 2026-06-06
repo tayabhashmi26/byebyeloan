@@ -77,6 +77,21 @@ body {
   margin: 0 auto 1.5rem;
 }
 
+/* Service cards — prominent drop shadow, lifts on hover */
+.service-card {
+  box-shadow:
+    0 4px 20px rgba(0, 102, 51, 0.10),
+    0 1px 6px  rgba(0,   0,  0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow:
+    0 16px 48px rgba(0, 102, 51, 0.18),
+    0  6px 16px rgba(0,   0,  0, 0.10);
+  transform: translateY(-4px);
+}
+
 /* Step number */
 .step-number {
   font-size: 5rem;
