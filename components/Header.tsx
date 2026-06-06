@@ -64,9 +64,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="ByeBye Loan — Pakistan Loan Clearing Service"
-              width={180}
-              height={50}
-              className="h-11 w-auto object-contain"
+              width={200}
+              height={56}
+              className="h-12 w-auto object-contain drop-shadow-sm"
               priority
               onError={() => setLogoError(true)}
             />

@@ -90,14 +90,13 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/og-image.png`],
   },
 
-  // ── Favicon & Icons ───────────────────────────────────────────────────────
+  // ── Favicon & Icons (files in app/ are auto-detected by Next.js) ─────────
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
     ],
-    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
-    shortcut: '/favicon.ico',
+    apple: [{ url: '/favicon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: '/favicon.png',
   },
 
   // ── Manifest (PWA / mobile homescreen) ───────────────────────────────────
