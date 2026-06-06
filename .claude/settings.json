@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"c:\\\\projects\\\\byebye\" -ErrorAction SilentlyContinue; if \\(-not \\(Test-Path \"c:\\\\projects\\\\byebye\"\\)\\) { Write-Output \"Directory does not exist\" })"
+    ]
+  }
+}
