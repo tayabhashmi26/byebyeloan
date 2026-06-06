@@ -1,37 +1,46 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { SITE_NAME, SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants';
+import { SITE_NAME, SITE_URL, PHONE_HREF } from '@/lib/constants';
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-});
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
-// ─── SEO Metadata ─────────────────────────────────────────────────────────────
+// ─── Full SEO Metadata ────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+
   title: {
-    default: `Loan Clear Service Pakistan | Smart Qarza, Paisayaar & All Banks | Official NOC — ${SITE_NAME}`,
+    default: 'ByeBye Loan — Pakistan Ka #1 Loan Clearing Service | Smart Qarza, Paisayaar & All Banks | Official NOC',
     template: `%s | ${SITE_NAME}`,
   },
+
   description:
-    'Pakistan ka #1 loan clearing service. Smart Qarza, Paisayaar, Foricash, QarzMitra, LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab aur sab bank loans clear karein. Official NOC milega. Calls aur SMS hamesha ke liye band. Free consultation.',
+    'Pakistan ka #1 loan clearing service. Smart Qarza, Paisayaar, Aitemaad, Hakeem, Daira, Fauri Cash, QarzMitra, Abhi, JazzCash, Easypaisa aur sab bank loans officially clear karein. Official NOC milega. Calls aur SMS hamesha ke liye band. Free consultation.',
+
   keywords: [
     'loan clearing service Pakistan',
-    'loan clear Pakistan',
+    'loan clear karna Pakistan',
     'Smart Qarza loan clear',
     'Paisayaar loan settlement',
-    'Foricash loan clear',
+    'Aitemaad loan clear',
+    'Hakeem app loan',
+    'Daira loan settlement',
+    'Fauri Cash clear',
     'QarzMitra settlement',
-    'LudoLoan clear',
-    'EasyLoan settlement',
-    'UpLoan clearance',
-    'PakCredit loan',
-    'HakeemApp loan clear',
-    'DairaApp clearance',
-    'PaysaGhur loan',
-    'MoneyTab settlement',
+    'Abhi loan clear',
+    'ZoodPay settlement',
+    'Muawin loan',
+    'Qist Bazaar clear',
+    'Neem Paymenow',
+    'Nova Finance loan',
+    'Baadmay clear',
+    'Alif Shop loan',
+    'JazzCash loan clear',
+    'Easypaisa loan settlement',
+    'HBL Microfinance clear',
+    'Zindigi loan',
+    'Konnect HBL loan',
+    'DOST loan clear',
     'loan app clearance Pakistan',
     'bank loan settlement Pakistan',
     'NOC loan Pakistan',
@@ -44,35 +53,57 @@ export const metadata: Metadata = {
     'Bank Alfalah loan',
     'loan se azaad Pakistan',
     'loan app se kaise bachein',
-    'loan clear karna Pakistan',
+    'byebye loan',
+    'byebyeloan online',
+    'byebye loan online Pakistan',
   ],
+
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+
+  // ── Open Graph (Facebook Ads, WhatsApp previews) ──────────────────────────
   openGraph: {
-    title: `${SITE_NAME} — Pakistan Ka #1 Loan Clearing Service`,
+    title: 'ByeBye Loan — Pakistan Ka #1 Loan Clearing Service',
     description:
-      'Smart Qarza, Paisayaar, Foricash, QarzMitra aur sab bank loans clear karein. Official NOC. Calls forever band. Free consultation.',
+      'Smart Qarza, Paisayaar, JazzCash, Easypaisa aur sab bank loans clear karein. Official NOC. Calls forever band. Free consultation.',
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: 'en_PK',
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/og-image.jpg`,
+        url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'ByeBye Loan — Pakistan Loan Clearing Service',
       },
     ],
   },
+
+  // ── Twitter / X Card ─────────────────────────────────────────────────────
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — Loan Clearing Service Pakistan`,
+    title: 'ByeBye Loan — Loan Clearing Service Pakistan',
     description:
-      'Clear your loan apps & bank loans. Official NOC. Stop all calls & SMS forever. Free consultation Pakistan.',
-    images: [`${SITE_URL}/og-image.jpg`],
+      'Clear your loan apps & bank loans in Pakistan. Official NOC. Stop all calls & SMS forever. Free consultation.',
+    images: [`${SITE_URL}/og-image.png`],
   },
+
+  // ── Favicon & Icons ───────────────────────────────────────────────────────
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: '/favicon.ico',
+  },
+
+  // ── Manifest (PWA / mobile homescreen) ───────────────────────────────────
+  manifest: '/manifest.json',
+
+  // ── Indexing rules ────────────────────────────────────────────────────────
   robots: {
     index: true,
     follow: true,
@@ -84,9 +115,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: SITE_URL,
+
+  // ── Canonical ─────────────────────────────────────────────────────────────
+  alternates: { canonical: SITE_URL },
+
+  // ── Google Search Console verification (add your code after connecting) ──
+  verification: {
+    google: 'REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE',
   },
+
   category: 'financial services',
 };
 
@@ -98,10 +135,17 @@ const structuredData = {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: SITE_NAME,
+      alternateName: 'ByeBye Loan Online',
       url: SITE_URL,
-      logo: `${SITE_URL}/logo.png`,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.png`,
+        width: 320,
+        height: 88,
+      },
+      image: `${SITE_URL}/og-image.png`,
       description:
-        "Pakistan's trusted loan clearing service offering official settlement for Smart Qarza, Paisayaar, Foricash, QarzMitra, LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab and all major Pakistani bank loans. Official NOC provided. Calls and SMS permanently stopped after clearance.",
+        "Pakistan's trusted loan clearing service. We officially settle Smart Qarza, Paisayaar, Aitemaad, Hakeem, Daira, Fauri Cash, QarzMitra, Abhi, ZoodPay, JazzCash, Easypaisa and all major Pakistani bank loans. Official NOC provided. Calls permanently stopped after clearance.",
       foundingDate: '2022',
       areaServed: 'Pakistan',
       contactPoint: {
@@ -122,59 +166,16 @@ const structuredData = {
       '@id': `${SITE_URL}/#business`,
       name: SITE_NAME,
       description:
-        "Pakistan's #1 loan clearing service. We officially settle Smart Qarza, Paisayaar, Foricash, QarzMitra, LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab and all Pakistani bank loans. Verified NOC provided. After clearance, no calls or SMS ever again.",
+        "Pakistan's #1 loan clearing service. Official NOC provided. All calls and SMS permanently stopped after clearance.",
       url: SITE_URL,
       telephone: PHONE_HREF,
+      image: `${SITE_URL}/og-image.png`,
+      logo: `${SITE_URL}/logo.png`,
       priceRange: '$$',
       currenciesAccepted: 'PKR',
       paymentAccepted: 'Bank Transfer, JazzCash, EasyPaisa, Cash',
       openingHours: 'Mo-Sa 09:00-21:00',
-      areaServed: {
-        '@type': 'Country',
-        name: 'Pakistan',
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Loan Clearing Services Pakistan',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Loan App Clearance Pakistan',
-              description:
-                'Official settlement of loans from Smart Qarza, Paisayaar, Foricash, QarzMitra, LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab. NOC provided.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Bank Loan Settlement Pakistan',
-              description:
-                'Official settlement of credit loans and personal loans from all Pakistani banks including HBL, UBL, MCB, ABL, Meezan Bank, Bank Alfalah, Faysal Bank. NOC provided.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Official NOC Certificate',
-              description:
-                'Verified No Objection Certificate issued after successful loan clearance. Legal proof that the loan obligation has been fulfilled.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Harassment Call & SMS Stop Service',
-              description:
-                'After official loan clearance, we guarantee permanent stop of all calls and SMS from loan apps and banks.',
-            },
-          },
-        ],
-      },
+      areaServed: { '@type': 'Country', name: 'Pakistan' },
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '4.9',
@@ -214,18 +215,10 @@ const structuredData = {
         },
         {
           '@type': 'Question',
-          name: 'NOC kya hota hai aur loan clearance ke liye kyun zaruri hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'NOC (No Objection Certificate) ek official document hai jo bank ya loan app is baat ki tasdiq karta hai ke aapka loan completely settle ho gaya hai aur unka koi claim nahi. Yeh document future mein credit score repair, property purchase, job applications wagheera ke liye zaruri hai.',
-          },
-        },
-        {
-          '@type': 'Question',
           name: 'Loan clear hone mein kitna waqt lagta hai?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Zyada tar cases mein 24 se 48 ghante ke andar process complete ho jata hai. Zyada complicated cases mein 3 se 5 business days lag sakte hain.',
+            text: 'Zyada tar cases mein 24 se 48 ghante ke andar process complete ho jata hai.',
           },
         },
         {
@@ -233,15 +226,15 @@ const structuredData = {
           name: 'Kya loan clear hone ke baad sach mein koi call ya SMS nahi aayega?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Bilkul guarantee. Official settlement aur NOC ke baad koi bhi bank ya loan app aapko contact karne ka haq nahi rakhta. Yeh hamare service ki lifetime guarantee hai.',
+            text: 'Bilkul guarantee. Official settlement aur NOC ke baad koi bhi bank ya loan app aapko contact nahi karega. Yeh hamare service ki lifetime guarantee hai.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Paisayaar, Foricash ya QarzMitra loan clear ho sakta hai?',
+          name: 'JazzCash aur Easypaisa ke loans bhi clear hote hain?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Haan, hum Paisayaar, Foricash, QarzMitra ke alaawa LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab — sab 12 apps ke loans clear karte hain.',
+            text: 'Haan, hum JazzCash, Easypaisa, HBL Microfinance, Zindigi, Konnect by HBL, aur DOST ke loans bhi officially clear karte hain.',
           },
         },
       ],
@@ -249,21 +242,21 @@ const structuredData = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD Structured Data for SEO and LLM indexing */}
+        {/* JSON-LD — Google rich results + LLM knowledge graph */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        {/* Facebook Pixel — add your pixel ID here */}
-        {/* Google Tag — add your GTM/GA4 ID here */}
+        {/* Geo targeting for Pakistan */}
+        <meta name="geo.region" content="PK" />
+        <meta name="geo.placename" content="Pakistan" />
+        <meta name="language" content="English, Urdu" />
+        {/* Facebook Pixel — paste your pixel code here */}
+        {/* Google Tag Manager — paste your GTM snippet here */}
       </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>

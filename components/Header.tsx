@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { WHATSAPP_LINK, PHONE_HREF, PHONE_DISPLAY, SITE_NAME } from '@/lib/constants';
 
 const NAV_LINKS = [
@@ -48,11 +49,15 @@ export default function Header() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-1 shrink-0" aria-label={SITE_NAME}>
-          <span className="text-xl font-extrabold text-gray-900">
-            <span className="text-[#F5A623]">ByeBye</span>
-            <span className="text-[#006633]"> Loan</span>
-          </span>
+        <a href="#home" className="flex items-center shrink-0" aria-label={SITE_NAME}>
+          <Image
+            src="/logo.png"
+            alt="ByeBye Loan — Pakistan Loan Clearing Service"
+            width={160}
+            height={44}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
