@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { SITE_NAME, SITE_URL, PHONE_HREF } from '@/lib/constants';
 
@@ -267,10 +268,39 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.region" content="PK" />
         <meta name="geo.placename" content="Pakistan" />
         <meta name="language" content="English, Urdu" />
-        {/* Facebook Pixel — paste your pixel code here */}
-        {/* Google Tag Manager — paste your GTM snippet here */}
+        {/* Meta Pixel — noscript fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1798090388233382&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
       </head>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+        {/* Meta Pixel */}
+        <Script
+          id="meta-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1798090388233382');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+      </body>
     </html>
   );
 }
