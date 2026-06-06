@@ -66,7 +66,7 @@ export default function Header() {
               alt="ByeBye Loan — Pakistan Loan Clearing Service"
               width={200}
               height={56}
-              className="h-12 w-auto object-contain drop-shadow-sm"
+              className="h-14 w-auto object-contain drop-shadow-sm"
               priority
               onError={() => setLogoError(true)}
             />
