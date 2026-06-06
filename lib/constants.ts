@@ -6,10 +6,10 @@ export const SITE_NAME = 'ByeBye Loan';
 export const SITE_TAGLINE = 'Pakistan Ka #1 Loan Clearing Service';
 export const SITE_URL = 'https://byebyeloan.online';
 
-// Contact — REPLACE with your real numbers
-export const WHATSAPP_NUMBER = '923001234567'; // Format: 92XXXXXXXXXX (no +)
-export const PHONE_DISPLAY = '0300-1234567';
-export const PHONE_HREF = '+923001234567';
+// Contact
+export const WHATSAPP_NUMBER = '923295596904'; // Format: 92XXXXXXXXXX (no +)
+export const PHONE_DISPLAY = '0329-5596904';
+export const PHONE_HREF = '+923295596904';
 
 // WhatsApp deep link with pre-filled message
 export const WHATSAPP_MESSAGE =
@@ -42,7 +42,7 @@ export const BANKS = [
 // Stats
 export const STATS = [
   { value: '5,000+', label: 'Loans Cleared' },
-  { value: '12+', label: 'Loan Apps' },
+  { value: '30+', label: 'Loan Apps' },
   { value: 'All', label: 'Pakistan Banks' },
   { value: '100%', label: 'NOC Verified' },
 ];

@@ -58,9 +58,12 @@ export const metadata: Metadata = {
     'byebye loan online Pakistan',
   ],
 
+  applicationName: SITE_NAME,
+  referrer: 'origin-when-cross-origin',
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
+  formatDetection: { telephone: true, email: false, address: false },
 
   // ── Open Graph (Facebook Ads, WhatsApp previews) ──────────────────────────
   openGraph: {
@@ -191,6 +194,16 @@ const structuredData = {
       description: 'Pakistan loan clearing service — Smart Qarza, Paisayaar, bank loans, Official NOC',
       publisher: { '@id': `${SITE_URL}/#organization` },
       inLanguage: ['en', 'ur'],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${SITE_URL}/#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/#services` },
+        { '@type': 'ListItem', position: 3, name: 'Loan Apps Cleared', item: `${SITE_URL}/#loan-apps` },
+        { '@type': 'ListItem', position: 4, name: 'FAQ', item: `${SITE_URL}/#faq` },
+      ],
     },
     {
       '@type': 'FAQPage',

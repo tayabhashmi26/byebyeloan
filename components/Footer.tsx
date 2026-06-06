@@ -10,7 +10,7 @@ const CITIES = [
 const SERVICES_LIST = [
   'Smart Qarza Loan Clear',
   'Paisayaar Settlement',
-  'Foricash Clearance',
+  'Fauri Cash Clearance',
   'QarzMitra Settlement',
   'Bank Loan Clearance',
   'Credit Loan Repayment',
@@ -99,9 +99,9 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {[
-                'Smart Qarza', 'Paisayaar', 'Foricash', 'QarzMitra',
-                'LudoLoan', 'EasyLoan', 'UpLoan', 'PakCredit',
-                'HakeemApp', 'DairaApp', 'PaysaGhur', 'MoneyTab',
+                'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem',
+                'Daira', 'Fauri Cash', 'QarzMitra', 'Abhi',
+                'JazzCash', 'Easypaisa', 'ZoodPay', 'PakCredit',
               ].map((app) => (
                 <li key={app} className="text-sm">
                   {app}
@@ -132,9 +132,13 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <p>
-            &copy; {year} {SITE_NAME}. All rights reserved. Pakistan Loan Clearing Service.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p>&copy; {year} {SITE_NAME}. All rights reserved. Pakistan Loan Clearing Service.</p>
+            <div className="flex items-center gap-4">
+              <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</a>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+          </div>
           <p className="text-center sm:text-right text-gray-500 max-w-md">
             <strong className="text-gray-400">Disclaimer:</strong> We provide debt settlement
             advisory services. Results may vary. We are not affiliated with any loan app or bank.

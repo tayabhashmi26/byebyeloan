@@ -10,7 +10,7 @@ const WhatsAppIcon = () => (
 const TRUST_BADGES = [
   '100% Official NOC',
   'All Banks of Pakistan',
-  '12+ Loan Apps Cleared',
+  '30+ Loan Apps Cleared',
   'Calls & SMS Forever Band',
 ];
 
