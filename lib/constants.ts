@@ -4,7 +4,7 @@
 
 export const SITE_NAME = 'ByeBye Loan';
 export const SITE_TAGLINE = 'Pakistan Ka #1 Loan Clearing Service';
-export const SITE_URL = 'https://byebayeloan.pk'; // Replace with your domain
+export const SITE_URL = 'https://byebyeloan.online';
 
 // Contact — REPLACE with your real numbers
 export const WHATSAPP_NUMBER = '923001234567'; // Format: 92XXXXXXXXXX (no +)

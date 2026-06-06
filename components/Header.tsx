@@ -19,9 +19,17 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
+const TextLogo = () => (
+  <span className="text-xl font-extrabold">
+    <span className="text-[#F5A623]">ByeBye</span>
+    <span className="text-[#006633]"> Loan</span>
+  </span>
+);
+
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,14 +58,19 @@ export default function Header() {
       >
         {/* Logo */}
         <a href="#home" className="flex items-center shrink-0" aria-label={SITE_NAME}>
-          <Image
-            src="/logo.png"
-            alt="ByeBye Loan — Pakistan Loan Clearing Service"
-            width={160}
-            height={44}
-            className="h-10 w-auto object-contain"
-            priority
-          />
+          {logoError ? (
+            <TextLogo />
+          ) : (
+            <Image
+              src="/logo.png"
+              alt="ByeBye Loan — Pakistan Loan Clearing Service"
+              width={180}
+              height={50}
+              className="h-11 w-auto object-contain"
+              priority
+              onError={() => setLogoError(true)}
+            />
+          )}
         </a>
 
         {/* Desktop nav */}
