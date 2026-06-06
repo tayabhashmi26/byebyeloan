@@ -136,7 +136,7 @@ export default function AdminNOCPage() {
             </table>
 
             {/* QR Code + Signature */}
-            <div className="flex justify-between items-start pt-4">
+            <div className="flex justify-between items-end pt-4">
               <div>
                 <p className="text-sm text-gray-600 mb-3">Verification QR Code:</p>
                 <img
@@ -147,8 +147,14 @@ export default function AdminNOCPage() {
                   className="border border-gray-200"
                 />
               </div>
-              <div className="flex flex-col justify-end">
-                <div className="mt-20 w-64 border-t border-gray-500 pt-2 text-right">
+              <div className="flex flex-col items-center">
+                {/* Official Signature */}
+                <img
+                  src="/Official-signature.png"
+                  alt="Authorized Signature"
+                  className="h-20 w-auto object-contain mb-1"
+                />
+                <div className="w-64 border-t border-gray-500 pt-2 text-center">
                   <p className="text-sm text-gray-600">Authorized Signature &amp; Official Stamp</p>
                 </div>
               </div>

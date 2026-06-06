@@ -121,8 +121,14 @@ export default async function VerifyPage({ params }: Props) {
               </p>
             </div>
 
-            <div className="flex flex-col items-end justify-end flex-1">
-              <div className="mt-16 border-t border-gray-400 pt-2 text-right w-64">
+            <div className="flex flex-col items-center justify-end flex-1">
+              {/* Official Signature */}
+              <img
+                src="/Official-signature.png"
+                alt="Authorized Signature"
+                className="h-20 w-auto object-contain mb-1"
+              />
+              <div className="w-64 border-t border-gray-400 pt-2 text-center">
                 <p className="text-sm text-gray-600">Authorized Signature &amp; Official Stamp</p>
               </div>
             </div>
