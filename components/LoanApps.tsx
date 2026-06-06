@@ -1,104 +1,60 @@
-import Image from 'next/image';
 import { BANKS, WHATSAPP_LINK } from '@/lib/constants';
 
-// ── Group 1: Direct Loan Apps ────────────────────────────────────────────────
-const LOAN_APPS = [
-  { name: 'Smart Qarza',  logo: '/logos/smart-qarza.svg'  },
-  { name: 'Paisayaar',    logo: '/logos/paisayaar.svg'    },
-  { name: 'Aitemaad',     logo: '/logos/aitemaad.svg'     },
-  { name: 'Hakeem',       logo: '/logos/hakeem.svg'       },
-  { name: 'Daira',        logo: '/logos/daira.svg'        },
-  { name: 'Sahara',       logo: '/logos/sahara.svg'       },
-  { name: 'Fauri Cash',   logo: '/logos/fauri-cash.svg'   },
-  { name: 'Money Tap',    logo: '/logos/money-tap.svg'    },
-  { name: 'PakCredit',    logo: '/logos/pakcredit.svg'    },
-  { name: 'Loan Lado',    logo: '/logos/loan-lado.svg'    },
-  { name: 'CashBazar',    logo: '/logos/cashbazar.svg'    },
-  { name: 'PaisaGhar',    logo: '/logos/paisaghar.svg'    },
-  { name: 'QarzMitra',    logo: '/logos/qarzmitra.svg'    },
+const GROUPS = [
+  {
+    title: 'Direct Loan Apps',
+    subtitle: 'Dedicated personal loan applications',
+    accent: '#006633',
+    bg: '#F0FDF4',
+    check: '#16a34a',
+    apps: [
+      'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem', 'Daira', 'Sahara',
+      'Fauri Cash', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar',
+      'PaisaGhar', 'QarzMitra',
+    ],
+  },
+  {
+    title: 'Fintech, BNPL & Digital Credit',
+    subtitle: 'Buy-now-pay-later and digital lending platforms',
+    accent: '#4338ca',
+    bg: '#EEF2FF',
+    check: '#4338ca',
+    apps: [
+      'Abhi', 'ZoodPay', 'ZoodMall', 'Muawin', 'Qist Bazaar', 'Tijara',
+      'Edufi', 'Taleem Connect', 'Neem Paymenow', 'Nova Finance', 'Alif Shop',
+    ],
+  },
+  {
+    title: 'Mobile Wallets & Microfinance',
+    subtitle: 'Telecom wallets and integrated bank micro-loans',
+    accent: '#b45309',
+    bg: '#FFFBEB',
+    check: '#b45309',
+    apps: [
+      'Easypaisa', 'JazzCash', 'HBL Microfinance', 'Zindigi', 'Konnect by HBL', 'DOST',
+    ],
+  },
 ];
 
-// ── Group 2: Fintech, BNPL & Digital Credit ──────────────────────────────────
-const FINTECH_APPS = [
-  { name: 'Abhi',            logo: '/logos/abhi.svg'           },
-  { name: 'ZoodPay',         logo: '/logos/zoodpay.svg'        },
-  { name: 'Muawin',          logo: '/logos/muawin.svg'         },
-  { name: 'Qist Bazaar',     logo: '/logos/qist-bazaar.svg'    },
-  { name: 'Tijara',          logo: '/logos/tijara.svg'         },
-  { name: 'Edufi',           logo: '/logos/edufi.svg'          },
-  { name: 'Taleem Connect',  logo: '/logos/taleem-connect.svg' },
-  { name: 'Neem Paymenow',   logo: '/logos/neem.svg'           },
-  { name: 'Nova Finance',    logo: '/logos/nova-finance.svg'   },
-  { name: 'Baadmay',         logo: '/logos/baadmay.svg'        },
-  { name: 'Alif Shop',       logo: '/logos/alif-shop.svg'      },
-];
-
-// ── Group 3: Mobile Wallets & Microfinance ───────────────────────────────────
-const WALLET_APPS = [
-  { name: 'Easypaisa',       logo: '/logos/easypaisa.svg'        },
-  { name: 'JazzCash',        logo: '/logos/jazzcash.svg'         },
-  { name: 'HBL Microfinance',logo: '/logos/hbl-microfinance.svg' },
-  { name: 'Zindigi',         logo: '/logos/zindigi.svg'          },
-  { name: 'Konnect by HBL',  logo: '/logos/konnect-hbl.svg'     },
-  { name: 'DOST',            logo: '/logos/dost.svg'             },
-];
-
-function AppGrid({ apps }: { apps: { name: string; logo: string }[] }) {
+function CheckIcon({ color }: { color: string }) {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-4">
-      {apps.map(({ name, logo }) => (
-        <article
-          key={name}
-          className="flex flex-col items-center gap-2 group cursor-default"
-          aria-label={`${name} loan clearance`}
-        >
-          <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl group-hover:scale-110 transition-all duration-200 border-2 border-white">
-            <Image
-              src={logo}
-              alt={`${name} logo`}
-              fill
-              sizes="64px"
-              className="object-cover"
-              unoptimized
-            />
-          </div>
-          <span className="text-center text-[11px] sm:text-xs font-semibold text-gray-700 leading-tight px-0.5">
-            {name}
-          </span>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-function GroupBlock({
-  title,
-  subtitle,
-  apps,
-  accentColor = '#006633',
-}: {
-  title: string;
-  subtitle: string;
-  apps: { name: string; logo: string }[];
-  accentColor?: string;
-}) {
-  return (
-    <div className="mb-14">
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-1 h-8 rounded-full" style={{ backgroundColor: accentColor }} />
-        <div>
-          <h3 className="text-lg font-extrabold text-gray-900 leading-tight">{title}</h3>
-          <p className="text-xs text-gray-500">{subtitle}</p>
-        </div>
-        <span
-          className="ml-auto text-xs font-bold px-3 py-1 rounded-full text-white"
-          style={{ backgroundColor: accentColor }}
-        >
-          {apps.length} Apps
-        </span>
-      </div>
-      <AppGrid apps={apps} />
-    </div>
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      <circle cx="7" cy="7" r="7" fill={color} opacity="0.15" />
+      <path
+        d="M4 7l2 2 4-4"
+        stroke={color}
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
@@ -110,7 +66,7 @@ export default function LoanApps() {
       className="py-20"
       style={{ background: 'linear-gradient(180deg, #F0F7F4 0%, #E8F4ED 100%)' }}
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
 
         {/* Section heading */}
         <div className="text-center mb-14">
@@ -127,68 +83,103 @@ export default function LoanApps() {
           <div className="section-divider mt-6" />
         </div>
 
-        {/* Group 1 */}
-        <GroupBlock
-          title="Direct Loan Apps"
-          subtitle="Dedicated personal loan applications"
-          apps={LOAN_APPS}
-          accentColor="#006633"
-        />
+        {/* App Groups */}
+        <div className="space-y-10">
+          {GROUPS.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden"
+            >
+              {/* Group header */}
+              <div
+                className="flex items-center justify-between px-6 py-4"
+                style={{ background: group.bg, borderBottom: `2px solid ${group.accent}18` }}
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-1 h-7 rounded-full"
+                    style={{ backgroundColor: group.accent }}
+                  />
+                  <div>
+                    <h3 className="text-base font-extrabold text-gray-900 leading-tight">
+                      {group.title}
+                    </h3>
+                    <p className="text-xs text-gray-500 mt-0.5">{group.subtitle}</p>
+                  </div>
+                </div>
+                <span
+                  className="text-xs font-bold px-3 py-1.5 rounded-full text-white shrink-0"
+                  style={{ backgroundColor: group.accent }}
+                >
+                  {group.apps.length} Apps ✓
+                </span>
+              </div>
 
-        {/* Group 2 */}
-        <GroupBlock
-          title="Fintech, BNPL & Digital Credit"
-          subtitle="Buy-now-pay-later and digital lending platforms"
-          apps={FINTECH_APPS}
-          accentColor="#4338ca"
-        />
-
-        {/* Group 3 */}
-        <GroupBlock
-          title="Mobile Wallets & Microfinance"
-          subtitle="Telecom wallets and integrated bank micro-loans"
-          apps={WALLET_APPS}
-          accentColor="#b45309"
-        />
+              {/* Pills */}
+              <div className="px-6 py-5 flex flex-wrap gap-2.5">
+                {group.apps.map((app) => (
+                  <span
+                    key={app}
+                    className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:border-gray-300 hover:shadow transition-all duration-150"
+                  >
+                    <CheckIcon color={group.check} />
+                    {app}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* Banks */}
-        <div className="pt-6 border-t border-[#006633]/10">
-          <h3 className="text-lg font-extrabold text-gray-900 mb-6 flex items-center gap-3">
-            <div className="w-1 h-8 rounded-full bg-[#006633]" />
-            <span>Pakistan Ke Sab Commercial Banks</span>
-            <span className="ml-auto text-xs font-bold px-3 py-1 rounded-full text-white bg-[#006633]">
-              All Banks
+        <div className="mt-10 rounded-2xl border border-[#006633]/20 bg-white shadow-sm overflow-hidden">
+          <div
+            className="flex items-center justify-between px-6 py-4"
+            style={{ background: '#F0FDF4', borderBottom: '2px solid #00663318' }}
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-1 h-7 rounded-full bg-[#006633]" />
+              <div>
+                <h3 className="text-base font-extrabold text-gray-900 leading-tight">
+                  Pakistan Ke Sab Commercial Banks
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.5">HBL, UBL, MCB, Meezan Bank aur baaki sab</p>
+              </div>
+            </div>
+            <span className="text-xs font-bold px-3 py-1.5 rounded-full text-white bg-[#006633] shrink-0">
+              All Banks ✓
             </span>
-          </h3>
-
-          <div className="flex flex-wrap gap-2 mb-8">
+          </div>
+          <div className="px-6 py-5 flex flex-wrap gap-2.5">
             {BANKS.map((bank) => (
               <span
                 key={bank}
-                className="bg-[#006633] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full"
+                className="inline-flex items-center gap-1.5 bg-white border border-gray-200 text-gray-800 text-sm font-medium px-4 py-2 rounded-full shadow-sm"
               >
+                <CheckIcon color="#006633" />
                 {bank}
               </span>
             ))}
-            <span className="bg-[#004d26] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-1.5 bg-[#006633] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
               + Sab Baaki Banks ✓
             </span>
           </div>
+        </div>
 
-          <div className="text-center">
-            <div className="inline-block bg-white rounded-2xl border-2 border-[#006633]/20 px-8 py-4 shadow-sm">
-              <p className="text-gray-700 font-medium text-sm sm:text-base">
-                Apna app ya bank list mein nahi?{' '}
-                <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#006633] font-bold hover:underline"
-                >
-                  Hum se puchein — hum zaroor help karein ge
-                </a>
-              </p>
-            </div>
+        {/* Bottom CTA */}
+        <div className="mt-8 text-center">
+          <div className="inline-block bg-white rounded-2xl border-2 border-[#006633]/20 px-8 py-4 shadow-sm">
+            <p className="text-gray-700 font-medium text-sm sm:text-base">
+              Apna app ya bank list mein nahi?{' '}
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#006633] font-bold hover:underline"
+              >
+                Hum se puchein — hum zaroor help karein ge
+              </a>
+            </p>
           </div>
         </div>
 
