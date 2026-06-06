@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",   // generates static HTML into ./out — works with DigitalOcean Static Site
-  trailingSlash: true, // avoids 404s on routes like /about/
+  // Removed output:'export' — Vercel runs Next.js natively with full dynamic support
 };
 
 export default nextConfig;

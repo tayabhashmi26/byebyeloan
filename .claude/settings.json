@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Get-ChildItem \"c:\\\\projects\\\\byebye\" -ErrorAction SilentlyContinue; if \\(-not \\(Test-Path \"c:\\\\projects\\\\byebye\"\\)\\) { Write-Output \"Directory does not exist\" })"
+      "PowerShell(Get-ChildItem \"c:\\\\projects\\\\byebye\" -ErrorAction SilentlyContinue; if \\(-not \\(Test-Path \"c:\\\\projects\\\\byebye\"\\)\\) { Write-Output \"Directory does not exist\" })",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git rm *)",
+      "Bash(Remove-Item \"c:\\\\projects\\\\byebye\\\\public\\\\logos\\\\ludoloan.svg\" -Force)",
+      "Bash(Remove-Item \"c:\\\\projects\\\\byebye\\\\public\\\\logos\\\\easyloan.svg\" -Force)",
+      "Bash(Remove-Item \"c:\\\\projects\\\\byebye\\\\public\\\\logos\\\\uploan.svg\" -Force)",
+      "Bash(Remove-Item \"c:\\\\projects\\\\byebye\\\\public\\\\logos\\\\foricash.svg\" -Force)",
+      "Bash(Remove-Item \"c:\\\\projects\\\\byebye\\\\public\\\\logos\\\\hakeemapp.svg\" -Force)"
     ]
   }
 }
