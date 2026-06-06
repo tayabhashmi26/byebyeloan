@@ -53,7 +53,7 @@ export default function Header() {
       </div>
 
       <nav
-        className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-16"
+        className="container mx-auto px-4 sm:px-6 flex items-center justify-between h-20"
         aria-label="Main navigation"
       >
         {/* Logo */}
@@ -66,7 +66,7 @@ export default function Header() {
               alt="ByeBye Loan — Pakistan Loan Clearing Service"
               width={200}
               height={56}
-              className="h-14 w-auto object-contain drop-shadow-sm"
+              className="h-16 w-auto object-contain drop-shadow-sm"
               priority
               onError={() => setLogoError(true)}
             />
