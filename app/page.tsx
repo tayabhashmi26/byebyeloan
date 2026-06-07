@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import TrustBar from '@/components/TrustBar';
 import PainPoints from '@/components/PainPoints';
 import Services from '@/components/Services';
 import LoanApps from '@/components/LoanApps';
@@ -19,7 +20,10 @@ export default function Home() {
         {/* 1. Hero — value prop + CTA above the fold */}
         <Hero />
 
-        {/* 2. Pain Points — agitate the problem */}
+        {/* 2. Trust bar — stats + SBP-regulated bank badges */}
+        <TrustBar />
+
+        {/* 3. Pain Points — agitate the problem */}
         <PainPoints />
 
         {/* 3. Services — present the solution */}
