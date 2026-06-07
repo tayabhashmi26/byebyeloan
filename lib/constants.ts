@@ -7,9 +7,9 @@ export const SITE_TAGLINE = 'Pakistan Ka #1 Loan Clearing Service';
 export const SITE_URL = 'https://byebyeloan.online';
 
 // Contact
-export const WHATSAPP_NUMBER = '923295596904'; // Format: 92XXXXXXXXXX (no +)
-export const PHONE_DISPLAY = '0329-5596904';
-export const PHONE_HREF = '+923295596904';
+export const WHATSAPP_NUMBER = '923176619813'; // Format: 92XXXXXXXXXX (no +)
+export const PHONE_DISPLAY = '0317-6619813';
+export const PHONE_HREF = '+923176619813';
 
 // WhatsApp deep link with pre-filled message
 export const WHATSAPP_MESSAGE =
