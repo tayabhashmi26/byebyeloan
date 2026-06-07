@@ -100,7 +100,7 @@ export default function AdminNOCPage() {
                 <img
                   src="/state-logo.png"
                   alt="State Logo"
-                  className="h-14 w-auto object-contain hidden print:block"
+                  className="h-14 w-auto object-contain"
                 />
               </div>
               <div className="text-right">
