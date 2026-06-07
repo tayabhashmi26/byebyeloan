@@ -126,12 +126,18 @@ export default function DashboardPage() {
                         </span>
                       </td>
                       <td className="px-4 py-3">
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 flex-wrap">
                           <button
                             onClick={() => router.push(`/admin/noc/${noc.id}`)}
                             className="bg-[#006633] text-white px-3 py-1 rounded-lg text-xs font-semibold hover:bg-[#004d26] transition-colors"
                           >
                             View / Print
+                          </button>
+                          <button
+                            onClick={() => router.push(`/admin/edit/${noc.id}`)}
+                            className="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-semibold hover:bg-blue-700 transition-colors"
+                          >
+                            Edit
                           </button>
                           <button
                             onClick={() => toggleActive(noc.id, noc.is_active)}
