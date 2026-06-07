@@ -96,6 +96,12 @@ export default function AdminNOCPage() {
                   alt="ByeBye Loan"
                   className="h-14 w-auto object-contain"
                 />
+                {/* State logo — print only */}
+                <img
+                  src="/state-logo.png"
+                  alt="State Logo"
+                  className="h-14 w-auto object-contain hidden print:block"
+                />
               </div>
               <div className="text-right">
                 <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Certificate No.</p>
