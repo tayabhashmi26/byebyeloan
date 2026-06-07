@@ -92,12 +92,6 @@ export default function AdminNOCPage() {
             <div className="flex items-center justify-between px-10 pt-8 pb-6 border-b-4 border-[#006633]">
               <div className="flex items-center gap-4">
                 <img
-                  src="/logo.png"
-                  alt="ByeBye Loan"
-                  className="h-14 w-auto object-contain"
-                />
-                {/* State logo — print only */}
-                <img
                   src="/state-logo.png"
                   alt="State Logo"
                   className="h-14 w-auto object-contain"
