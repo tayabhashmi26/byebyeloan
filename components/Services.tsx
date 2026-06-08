@@ -1,4 +1,4 @@
-import { Smartphone, Building2, FileCheck, BellOff } from 'lucide-react';
+import { Smartphone, Building2, FileCheck, BellOff, Gift } from 'lucide-react';
 import { WHATSAPP_LINK } from '@/lib/constants';
 
 const SERVICES = [
@@ -6,8 +6,8 @@ const SERVICES = [
     icon: Smartphone,
     title: 'Loan App Clearance',
     description:
-      'Smart Qarza, Paisayaar, Foricash, QarzMitra, LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab — hum sab apps ke loans officially clear karte hain.',
-    badge: '12+ Apps',
+      'Smart Qarza, Paisayaar, Aitemaad, Hakeem, Daira, Fauri Cash, QarzMitra, Abhi, ZoodPay, JazzCash, Easypaisa aur 30+ apps — hum sab ke loans officially clear karte hain.',
+    badge: '30+ Apps',
     badgeColor: '#006633',
   },
   {
@@ -33,6 +33,14 @@ const SERVICES = [
       'Clearance ke baad koi bhi bank ya loan app aapko call nahi karega, SMS nahi bhejega. Yeh hamare service ki lifetime guarantee hai.',
     badge: 'Guaranteed',
     badgeColor: '#006633',
+  },
+  {
+    icon: Gift,
+    title: 'Loan App Cashback Coupons',
+    description:
+      'Aapke loan app par special cashback milega coupon ki form mein. Loan clear karwaen aur savings bhi paen — yeh hamare clients ke liye ek exclusive benefit hai.',
+    badge: 'Exclusive',
+    badgeColor: '#b45309',
   },
 ];
 
