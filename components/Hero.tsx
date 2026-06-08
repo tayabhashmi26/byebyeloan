@@ -1,5 +1,6 @@
 import { CheckCircle, Phone } from 'lucide-react';
-import { WHATSAPP_LINK, PHONE_HREF, PHONE_DISPLAY, STATS } from '@/lib/constants';
+import { PHONE_HREF, PHONE_DISPLAY, STATS } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
@@ -55,16 +56,13 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WALink
             className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1db954] text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0"
             aria-label="WhatsApp pe free consultation lein"
           >
             <WhatsAppIcon />
             Free Consultation — WhatsApp
-          </a>
+          </WALink>
           <a
             href={`tel:${PHONE_HREF}`}
             className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 border-2 border-white/70 hover:border-white text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-200 backdrop-blur-sm"

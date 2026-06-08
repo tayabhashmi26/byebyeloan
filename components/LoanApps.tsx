@@ -1,4 +1,5 @@
-import { BANKS, WHATSAPP_LINK } from '@/lib/constants';
+import { BANKS } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const GROUPS = [
   {
@@ -171,14 +172,9 @@ export default function LoanApps() {
           <div className="inline-block bg-white rounded-2xl border-2 border-[#006633]/20 px-8 py-4 shadow-sm">
             <p className="text-gray-700 font-medium text-sm sm:text-base">
               Apna app ya bank list mein nahi?{' '}
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#006633] font-bold hover:underline"
-              >
+              <WALink className="text-[#006633] font-bold hover:underline">
                 Hum se puchein — hum zaroor help karein ge
-              </a>
+              </WALink>
             </p>
           </div>
         </div>

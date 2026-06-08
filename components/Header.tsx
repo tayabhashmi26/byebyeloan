@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
-import { WHATSAPP_LINK, PHONE_HREF, PHONE_DISPLAY, SITE_NAME } from '@/lib/constants';
+import { PHONE_HREF, PHONE_DISPLAY, SITE_NAME } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -97,16 +98,13 @@ export default function Header() {
             <Phone size={15} aria-hidden="true" />
             {PHONE_DISPLAY}
           </a>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WALink
             className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1db954] text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors duration-200 shadow"
             aria-label="WhatsApp pe free consultation"
           >
             <WhatsAppIcon />
             WhatsApp Karein
-          </a>
+          </WALink>
         </div>
 
         {/* Mobile hamburger */}
@@ -145,16 +143,13 @@ export default function Header() {
               <Phone size={16} aria-hidden="true" />
               Call Karein
             </a>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WALink
               onClick={closeMenu}
               className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1db954] text-white font-bold py-3 rounded-xl text-sm transition-colors"
             >
               <WhatsAppIcon />
               WhatsApp
-            </a>
+            </WALink>
           </div>
         </div>
       )}

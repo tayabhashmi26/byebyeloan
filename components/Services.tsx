@@ -1,5 +1,5 @@
 import { Smartphone, Building2, FileCheck, BellOff, Gift } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const SERVICES = [
   {
@@ -99,14 +99,11 @@ export default function Services() {
 
         {/* CTA below */}
         <div className="text-center mt-12">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WALink
             className="inline-flex items-center gap-2 bg-[#006633] hover:bg-[#004d26] text-white font-bold px-8 py-4 rounded-2xl text-base transition-colors duration-200 shadow-lg"
           >
             Apna Loan Clear Karaen — Free Consultation
-          </a>
+          </WALink>
         </div>
       </div>
     </section>

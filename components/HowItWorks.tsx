@@ -1,5 +1,5 @@
 import { MessageSquare, Handshake, BadgeCheck } from 'lucide-react';
-import { WHATSAPP_LINK } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const STEPS = [
   {
@@ -87,14 +87,11 @@ export default function HowItWorks() {
 
         {/* CTA */}
         <div className="text-center mt-14">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WALink
             className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#1db954] text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
           >
             Abhi Start Karein — Free Hai
-          </a>
+          </WALink>
           <p className="text-gray-400 text-sm mt-3">No commitment — sirf baat karte hain</p>
         </div>
       </div>

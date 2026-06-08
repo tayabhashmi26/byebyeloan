@@ -1,13 +1,10 @@
 'use client';
 
-import { WHATSAPP_LINK } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 export default function WhatsAppButton() {
   return (
-    <a
-      href={WHATSAPP_LINK}
-      target="_blank"
-      rel="noopener noreferrer"
+    <WALink
       className="whatsapp-pulse fixed bottom-6 right-6 z-50 w-16 h-16 bg-[#25D366] hover:bg-[#1db954] rounded-full flex items-center justify-center shadow-2xl transition-all duration-200 hover:scale-110 active:scale-95"
       aria-label="WhatsApp pe loan clearing consultation lein"
     >
@@ -24,6 +21,6 @@ export default function WhatsAppButton() {
       <span className="absolute right-full mr-3 bg-gray-900 text-white text-xs font-semibold whitespace-nowrap px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none">
         Free Consultation
       </span>
-    </a>
+    </WALink>
   );
 }

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import WALink from '@/components/WALink';
+import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 const FAQS = [
   {
@@ -117,19 +119,12 @@ export default function FAQ() {
         <div className="text-center mt-10">
           <p className="text-gray-500 text-sm">
             Koi aur sawal hai?{' '}
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(
-                  `https://wa.me/923001234567?text=${encodeURIComponent('Assalam o Alaikum! Mujhe kuch sawaal poochne hain.')}`,
-                  '_blank'
-                );
-              }}
+            <WALink
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Assalam o Alaikum! Mujhe kuch sawaal poochne hain.')}`}
               className="text-[#006633] font-semibold hover:underline"
             >
               Humse seedha WhatsApp par puchein →
-            </a>
+            </WALink>
           </p>
         </div>
       </div>

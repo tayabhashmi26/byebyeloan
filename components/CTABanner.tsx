@@ -1,5 +1,6 @@
 import { Phone } from 'lucide-react';
-import { WHATSAPP_LINK, PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants';
+import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants';
+import WALink from '@/components/WALink';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6" aria-hidden="true">
@@ -34,16 +35,13 @@ export default function CTABanner() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <WALink
             className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1db954] text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-200 shadow-2xl hover:-translate-y-0.5"
             aria-label="WhatsApp pe free loan consultation lein"
           >
             <WhatsAppIcon />
             WhatsApp — Free Consultation
-          </a>
+          </WALink>
           <a
             href={`tel:${PHONE_HREF}`}
             className="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-[#006633] font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-200 shadow-2xl hover:-translate-y-0.5"
