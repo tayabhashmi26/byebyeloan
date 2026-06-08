@@ -74,8 +74,8 @@ export default async function VerifyPage({ params }: Props) {
           <div className="flex items-center justify-between px-8 pt-7 pb-5 border-b-4 border-[#006633]">
             <div className="flex items-center gap-4">
               <img
-                src="/logo.png"
-                alt="ByeBye Loan"
+                src="/state-logo.png"
+                alt="State Logo"
                 className="h-14 w-auto object-contain"
               />
             </div>
