@@ -101,6 +101,17 @@ function BatchContent() {
 
   const [nocs, setNocs] = useState<NOCRecord[]>([]);
   const [loading, setLoading] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  function copyAllLinks() {
+    const links = nocs
+      .map((noc) => `${noc.loan_app} — ${noc.client_name}\n${siteUrl}/verify/${noc.id}`)
+      .join('\n\n');
+    navigator.clipboard.writeText(links).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
+  }
 
   useEffect(() => {
     if (!ids.length) { router.push('/admin/dashboard'); return; }
@@ -124,20 +135,57 @@ function BatchContent() {
           </button>
           <span className="font-extrabold">{nocs.length} NOCs Ready to Print</span>
         </div>
-        <button
-          onClick={() => window.print()}
-          className="bg-[#F5A623] hover:bg-[#e09500] text-white font-bold px-6 py-2 rounded-xl text-sm transition-colors"
-        >
-          🖨 Print All {nocs.length} NOCs
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={copyAllLinks}
+            className={`font-bold px-5 py-2 rounded-xl text-sm transition-colors ${copied ? 'bg-white text-[#006633]' : 'bg-white/15 hover:bg-white/25 text-white'}`}
+          >
+            {copied ? '✓ Copied!' : '📋 Copy All Links'}
+          </button>
+          <button
+            onClick={() => window.print()}
+            className="bg-[#F5A623] hover:bg-[#e09500] text-white font-bold px-6 py-2 rounded-xl text-sm transition-colors"
+          >
+            🖨 Print All {nocs.length} NOCs
+          </button>
+        </div>
       </div>
 
-      {/* Preview info — hidden when printing */}
-      <div className="print:hidden container mx-auto px-4 py-4 max-w-2xl">
+      {/* Links panel — hidden when printing */}
+      <div className="print:hidden container mx-auto px-4 py-4 max-w-2xl space-y-3">
         <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-4">
-          <p className="text-sm text-gray-600">
-            <strong>{nocs.length} separate NOC certificates</strong> are shown below — one per loan app.
-            Click <strong>Print All</strong> to print them as separate pages in one go.
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-sm font-bold text-gray-700">Verification Links ({nocs.length})</p>
+            <button
+              onClick={copyAllLinks}
+              className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-colors ${copied ? 'bg-[#006633] text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'}`}
+            >
+              {copied ? '✓ Copied All!' : 'Copy All'}
+            </button>
+          </div>
+          <div className="space-y-2">
+            {nocs.map((noc) => {
+              const url = `${siteUrl}/verify/${noc.id}`;
+              return (
+                <div key={noc.id} className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-2.5">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-bold text-[#006633]">{noc.loan_app}</p>
+                    <p className="text-xs text-gray-400 font-mono truncate">{url}</p>
+                  </div>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(url)}
+                    className="shrink-0 text-[10px] font-semibold text-gray-400 hover:text-[#006633] transition-colors"
+                  >
+                    Copy
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-3">
+          <p className="text-sm text-gray-500">
+            <strong>{nocs.length} separate NOC certificates</strong> below — click <strong>Print All</strong> to print as separate A4 pages.
           </p>
         </div>
       </div>
