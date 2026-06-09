@@ -10,17 +10,17 @@ function fmt(n: number) {
   return n.toLocaleString('en-PK', { minimumFractionDigits: 0 });
 }
 
-function groupByClient(nocs: NOCRecord[]) {
+function groupByCnic(nocs: NOCRecord[]) {
   const order: string[] = [];
   const map: Record<string, NOCRecord[]> = {};
   for (const noc of nocs) {
-    if (!map[noc.client_name]) {
-      order.push(noc.client_name);
-      map[noc.client_name] = [];
+    if (!map[noc.cnic]) {
+      order.push(noc.cnic);
+      map[noc.cnic] = [];
     }
-    map[noc.client_name].push(noc);
+    map[noc.cnic].push(noc);
   }
-  return order.map((name) => ({ name, nocs: map[name] }));
+  return order.map((cnic) => ({ cnic, name: map[cnic][0].client_name, nocs: map[cnic] }));
 }
 
 export default function DashboardPage() {
@@ -65,7 +65,7 @@ export default function DashboardPage() {
     });
   }
 
-  const groups = groupByClient(nocs);
+  const groups = groupByCnic(nocs);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -136,28 +136,28 @@ export default function DashboardPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {groups.map(({ name, nocs: groupNocs }) => (
+                  {groups.map(({ cnic, name, nocs: groupNocs }) => (
                     <>
                       {/* Client group header row */}
-                      <tr key={`group-${name}`} className="bg-[#f0fdf4] border-y border-[#006633]/10">
+                      <tr key={`group-${cnic}`} className="bg-[#f0fdf4] border-y border-[#006633]/10">
                         <td colSpan={6} className="px-4 py-2.5">
                           <div className="flex items-center justify-between">
                             <div>
                               <span className="font-bold text-[#006633] text-sm">{name}</span>
-                              <span className="ml-2 text-xs text-gray-400">{groupNocs[0].cnic}</span>
+                              <span className="ml-2 text-xs font-mono text-gray-500 bg-white border border-gray-200 px-2 py-0.5 rounded">{cnic}</span>
                               <span className="ml-2 text-xs bg-[#006633]/10 text-[#006633] font-semibold px-2 py-0.5 rounded-full">
                                 {groupNocs.length} NOC{groupNocs.length > 1 ? 's' : ''}
                               </span>
                             </div>
                             <button
-                              onClick={() => copyLinks(groupNocs, name)}
+                              onClick={() => copyLinks(groupNocs, cnic)}
                               className={`text-xs font-bold px-3 py-1.5 rounded-lg transition-colors ${
-                                copiedKey === name
+                                copiedKey === cnic
                                   ? 'bg-[#006633] text-white'
                                   : 'bg-white border border-[#006633]/30 text-[#006633] hover:bg-[#006633] hover:text-white'
                               }`}
                             >
-                              {copiedKey === name ? '✓ Copied!' : `📋 Copy ${groupNocs.length > 1 ? `All ${groupNocs.length} Links` : 'Link'}`}
+                              {copiedKey === cnic ? '✓ Copied!' : `📋 Copy ${groupNocs.length > 1 ? `All ${groupNocs.length} Links` : 'Link'}`}
                             </button>
                           </div>
                         </td>
