@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const LOAN_APPS = [
   'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem', 'Daira', 'Sahara',
-  'Fauri Cash', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar', 'PaisaGhar', 'QarzMitra',
+  'Fauri Cash', 'Fori Qarza', 'Paisa Guru', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar', 'PaisaGhar', 'QarzMitra',
   'Abhi', 'ZoodPay', 'Muawin', 'Qist Bazaar', 'Tijara', 'Edufi', 'Taleem Connect',
   'Neem Paymenow', 'Nova Finance', 'Baadmay', 'Alif Shop',
   'Easypaisa', 'JazzCash', 'HBL Microfinance', 'Zindigi', 'Konnect by HBL', 'DOST',
