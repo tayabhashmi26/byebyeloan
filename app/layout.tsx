@@ -129,7 +129,7 @@ export const metadata: Metadata = {
 
   // ── Google Search Console verification (add your code after connecting) ──
   verification: {
-    google: 'REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE',
+    google: 'b874349a6b8792ef',
   },
 
   category: 'financial services',
