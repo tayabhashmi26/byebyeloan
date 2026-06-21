@@ -55,6 +55,15 @@ const POSTS = [
     readTime: '7 min',
   },
   {
+    slug: 'loan-clearance-service-pakistan',
+    title: 'Loan Clearance Service in Pakistan — #1 Trusted Service',
+    excerpt: 'Pakistan mein loan clearance service kya hai, kaise kaam karti hai, aur ByeBye Loan kyun Pakistan ka #1 trusted choice hai. 5,000+ clients served. 24–48 ghante mein NOC guaranteed.',
+    date: '2026-06-21',
+    category: 'Loan Clearance',
+    categoryColor: '#006633',
+    readTime: '9 min',
+  },
+  {
     slug: 'loan-repayment-emergency-checklist',
     title: 'Struggling to Make a Loan Repayment? Here is Your Emergency Checklist',
     excerpt: 'Loan repayment afford nahi ho rahi? Yeh 6-step emergency checklist follow karein — aaj se. Step by step guide for Pakistanis struggling with loan payments.',
