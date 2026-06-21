@@ -10,8 +10,8 @@ const GROUPS = [
     check: '#16a34a',
     apps: [
       'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem', 'Daira', 'Sahara',
-      'Fauri Cash', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar',
-      'PaisaGhar', 'QarzMitra',
+      'Fauri Cash', 'Fori Qarza', 'Paisa Guru', 'Money Tap', 'PakCredit',
+      'Loan Lado', 'CashBazar', 'PaisaGhar', 'QarzMitra',
     ],
   },
   {

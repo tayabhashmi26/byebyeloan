@@ -35,6 +35,18 @@ const FAQS = [
     a: 'Haan, hum Paisayaar, Foricash, QarzMitra ke alaawa LudoLoan, EasyLoan, UpLoan, PakCredit, HakeemApp, DairaApp, PaysaGhur, MoneyTab — sab 12 apps ke loans clear karte hain.',
   },
   {
+    q: 'Loan app calls aur SMS kaise hamesha ke liye band hon?',
+    a: 'Loan app harassment calls aur SMS band karne ka ek hi tarika hai — official loan settlement aur NOC lena. Jab hum aapka loan officially clear karte hain aur NOC milta hai, tab loan app ya bank legally aapko contact nahi kar sakta. ByeBye Loan yeh pura process handle karta hai. Calls band karna hamare service ki lifetime guarantee hai.',
+  },
+  {
+    q: 'Loan default ho jaaye toh kya karna chahiye Pakistan mein?',
+    a: 'Loan default hone par ghabrana nahi chahiye. Pehla qadam yeh hai ke hum se rabta karein. Hum aapke loan ki current status check karenge, loan app ya bank se negotiate karenge, aur best possible settlement amount par aapka loan officially close karwa denge. Default ke baad bhi settlement ho sakti hai — aur NOC mil sakta hai.',
+  },
+  {
+    q: 'Fori Qarza, Paisa Guru ya Loan Lado ka loan clear ho sakta hai?',
+    a: 'Haan, hum Fori Qarza, Paisa Guru, Loan Lado ke alaawa Pakistan ke tamam 30+ loan apps ke loans officially clear karte hain. Chahe app chhota ho ya bara, hum direct unke saath negotiate karte hain aur aapko verified NOC dilwate hain.',
+  },
+  {
     q: 'Is service ka kharcha kitna hai?',
     a: 'Pehli consultation bilkul FREE hai. Service charge loan ki nature aur amount par depend karta hai. Humse rabta karein aur hum aapko complete transparent estimate denge — koi chhupa hua charge nahi.',
   },

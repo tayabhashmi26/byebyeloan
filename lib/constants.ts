@@ -20,7 +20,7 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
 export const LOAN_APPS = [
   // Group 1: Direct Loan Apps
   'Smart Qarza', 'Paisayaar', 'Aitemaad', 'Hakeem', 'Daira', 'Sahara',
-  'Fauri Cash', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar',
+  'Fauri Cash', 'Fori Qarza', 'Paisa Guru', 'Money Tap', 'PakCredit', 'Loan Lado', 'CashBazar',
   'PaisaGhar', 'QarzMitra',
   // Group 2: Fintech, BNPL & Digital Credit
   'Abhi', 'ZoodPay', 'ZoodMall', 'Muawin', 'Qist Bazaar', 'Tijara',
