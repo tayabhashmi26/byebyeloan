@@ -81,7 +81,7 @@ export default function Header() {
         <ul className="hidden lg:flex items-center gap-7" role="list">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
-              {href.startsWith('/') ? (
+              {!href.includes('#') ? (
                 <Link
                   href={href}
                   className="text-sm font-medium text-gray-600 hover:text-[#006633] transition-colors duration-150"
@@ -136,7 +136,7 @@ export default function Header() {
           <ul className="container mx-auto px-4 py-4 space-y-1" role="list">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
-                {href.startsWith('/') ? (
+                {!href.includes('#') ? (
                   <Link
                     href={href}
                     onClick={closeMenu}
