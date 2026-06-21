@@ -8,11 +8,11 @@ import { PHONE_HREF, PHONE_DISPLAY, SITE_NAME } from '@/lib/constants';
 import WALink from '@/components/WALink';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Loan Apps', href: '#loan-apps' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Home', href: '/#home' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Loan Apps', href: '/#loan-apps' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'FAQ', href: '/#faq' },
   { label: 'Blog', href: '/blog' },
   { label: 'Calculator', href: '/tools/loan-penalty-calculator' },
 ];
@@ -61,7 +61,7 @@ export default function Header() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="#home" className="flex items-center shrink-0" aria-label={SITE_NAME}>
+        <a href="/" className="flex items-center shrink-0" aria-label={SITE_NAME}>
           {logoError ? (
             <TextLogo />
           ) : (
