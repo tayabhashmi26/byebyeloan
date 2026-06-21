@@ -8,6 +8,7 @@ import HowItWorks from '@/components/HowItWorks';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
+import BlogPreview from '@/components/BlogPreview';
 import CTABanner from '@/components/CTABanner';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -44,7 +45,10 @@ export default function Home() {
         {/* 8. FAQ — SEO + LLM knowledge graph */}
         <FAQ />
 
-        {/* 9. Final CTA — conversion push */}
+        {/* 9. Blog preview — expert guides, SEO internal linking */}
+        <BlogPreview />
+
+        {/* 10. Final CTA — conversion push */}
         <CTABanner />
       </main>
 
