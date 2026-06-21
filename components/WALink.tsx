@@ -21,6 +21,9 @@ export default function WALink({ href = WHATSAPP_LINK, children, onClick, ...pro
       value: 1.0,
       currency: 'PKR',
     });
+    window.gtag?.('event', 'conversion', {
+      send_to: 'AW-18223083898/_LD8CLmx_rocEPriuPFD',
+    });
     window.fbq?.('track', 'Contact');
     onClick?.(e);
   }
