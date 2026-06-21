@@ -157,11 +157,30 @@ export default function BlogPage() {
               ))}
             </div>
 
+            {/* Calculator promo */}
+            <div className="mt-12 bg-white border-2 border-[#006633]/20 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-5">
+              <div className="shrink-0 w-14 h-14 rounded-2xl bg-[#006633] flex items-center justify-center">
+                <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <p className="font-extrabold text-gray-900 mb-1">Free Loan Penalty Calculator</p>
+                <p className="text-gray-500 text-sm">Principal + interest + late fees — sab ek jagah calculate karein. Bilkul free.</p>
+              </div>
+              <Link
+                href="/tools/loan-penalty-calculator"
+                className="shrink-0 bg-[#006633] hover:bg-[#004d26] text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap"
+              >
+                Calculator Try Karein →
+              </Link>
+            </div>
+
             {/* Back to home */}
-            <div className="text-center mt-12">
+            <div className="text-center mt-6">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 bg-[#006633] hover:bg-[#004d26] text-white font-bold px-8 py-4 rounded-2xl transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 text-[#006633] hover:underline font-medium text-sm"
               >
                 ← Wapas ByeBye Loan Home Par
               </Link>
