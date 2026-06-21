@@ -54,6 +54,15 @@ const POSTS = [
     categoryColor: '#b45309',
     readTime: '7 min',
   },
+  {
+    slug: 'loan-repayment-emergency-checklist',
+    title: 'Struggling to Make a Loan Repayment? Here is Your Emergency Checklist',
+    excerpt: 'Loan repayment afford nahi ho rahi? Yeh 6-step emergency checklist follow karein — aaj se. Step by step guide for Pakistanis struggling with loan payments.',
+    date: '2026-06-21',
+    category: 'Emergency Guide',
+    categoryColor: '#1d4ed8',
+    readTime: '8 min',
+  },
 ];
 
 function CalendarIcon() {
