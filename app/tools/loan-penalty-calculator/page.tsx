@@ -8,16 +8,24 @@ import WALink from '@/components/WALink';
 import { WHATSAPP_NUMBER } from '@/lib/constants';
 
 const PRESETS = [
-  { name: 'Smart Qarza', monthlyRate: 3.5, dailyFee: 150 },
-  { name: 'Paisayaar', monthlyRate: 3.0, dailyFee: 120 },
-  { name: 'Aitemaad', monthlyRate: 3.0, dailyFee: 100 },
-  { name: 'Fori Qarza', monthlyRate: 4.0, dailyFee: 200 },
-  { name: 'Paisa Guru', monthlyRate: 4.0, dailyFee: 180 },
-  { name: 'Fauri Cash', monthlyRate: 3.5, dailyFee: 150 },
-  { name: 'Loan Lado', monthlyRate: 3.0, dailyFee: 100 },
-  { name: 'Money Tap', monthlyRate: 3.5, dailyFee: 150 },
-  { name: 'Other App', monthlyRate: 3.0, dailyFee: 100 },
-  { name: 'Bank Loan', monthlyRate: 1.5, dailyFee: 0 },
+  { name: 'Smart Qarza',  monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'Paisayaar',    monthlyRate: 3.0, dailyFee: 120 },
+  { name: 'Aitemaad',     monthlyRate: 3.0, dailyFee: 100 },
+  { name: 'Hakeem',       monthlyRate: 3.0, dailyFee: 120 },
+  { name: 'Daira',        monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'Sahara',       monthlyRate: 3.0, dailyFee: 120 },
+  { name: 'Fauri Cash',   monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'Fori Qarza',   monthlyRate: 4.0, dailyFee: 200 },
+  { name: 'Paisa Guru',   monthlyRate: 4.0, dailyFee: 180 },
+  { name: 'Money Tap',    monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'PakCredit',    monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'Loan Lado',    monthlyRate: 3.0, dailyFee: 100 },
+  { name: 'CashBazar',    monthlyRate: 4.0, dailyFee: 180 },
+  { name: 'PaisaGhar',    monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'QarzMitra',    monthlyRate: 3.0, dailyFee: 100 },
+  { name: 'EasyLoan',     monthlyRate: 3.5, dailyFee: 150 },
+  { name: 'Other App',    monthlyRate: 3.0, dailyFee: 100 },
+  { name: 'Bank Loan',    monthlyRate: 1.5, dailyFee: 0 },
 ];
 
 function fmt(n: number) {
