@@ -55,6 +55,15 @@ const POSTS = [
     readTime: '7 min',
   },
   {
+    slug: 'loan-overdue-credit-report-pakistan',
+    title: 'How Long Does an Overdue Loan Stay on Your Credit Report in Pakistan?',
+    excerpt: 'Pakistan mein eCIB credit report par loan default kitne saal rehta hai? Bad credit score kaise fix karein aur NOC clearance certificate se credit history kaise rebuild hoti hai — complete guide.',
+    date: '2026-06-21',
+    category: 'Credit Report',
+    categoryColor: '#312e81',
+    readTime: '10 min',
+  },
+  {
     slug: 'loan-clearance-service-pakistan',
     title: 'Loan Clearance Service in Pakistan — #1 Trusted Service',
     excerpt: 'Pakistan mein loan clearance service kya hai, kaise kaam karti hai, aur ByeBye Loan kyun Pakistan ka #1 trusted choice hai. 5,000+ clients served. 24–48 ghante mein NOC guaranteed.',
