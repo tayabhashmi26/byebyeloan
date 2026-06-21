@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { PHONE_HREF, PHONE_DISPLAY, SITE_NAME } from '@/lib/constants';
 import WALink from '@/components/WALink';
 
@@ -12,6 +13,7 @@ const NAV_LINKS = [
   { label: 'Loan Apps', href: '#loan-apps' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 const WhatsAppIcon = () => (
@@ -78,12 +80,21 @@ export default function Header() {
         <ul className="hidden lg:flex items-center gap-7" role="list">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
-              <a
-                href={href}
-                className="text-sm font-medium text-gray-600 hover:text-[#006633] transition-colors duration-150"
-              >
-                {label}
-              </a>
+              {href.startsWith('/') ? (
+                <Link
+                  href={href}
+                  className="text-sm font-medium text-gray-600 hover:text-[#006633] transition-colors duration-150"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  href={href}
+                  className="text-sm font-medium text-gray-600 hover:text-[#006633] transition-colors duration-150"
+                >
+                  {label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -124,13 +135,23 @@ export default function Header() {
           <ul className="container mx-auto px-4 py-4 space-y-1" role="list">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
-                <a
-                  href={href}
-                  onClick={closeMenu}
-                  className="block py-3 px-3 text-sm font-medium text-gray-700 hover:text-[#006633] hover:bg-[#F0F7F4] rounded-xl transition-colors"
-                >
-                  {label}
-                </a>
+                {href.startsWith('/') ? (
+                  <Link
+                    href={href}
+                    onClick={closeMenu}
+                    className="block py-3 px-3 text-sm font-medium text-gray-700 hover:text-[#006633] hover:bg-[#F0F7F4] rounded-xl transition-colors"
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={href}
+                    onClick={closeMenu}
+                    className="block py-3 px-3 text-sm font-medium text-gray-700 hover:text-[#006633] hover:bg-[#F0F7F4] rounded-xl transition-colors"
+                  >
+                    {label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
