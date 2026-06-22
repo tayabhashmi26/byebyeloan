@@ -264,6 +264,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
+        {/* gtag stub — must run before any click fires */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];window.gtag=function(){window.dataLayer.push(arguments)};`,
+          }}
+        />
         {/* JSON-LD — Google rich results + LLM knowledge graph */}
         <script
           type="application/ld+json"
