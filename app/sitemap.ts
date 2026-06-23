@@ -7,6 +7,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/blog/what-is-loan-clearance-service`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/blog/loan-app-harassment-calls-band-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    // New app-specific guides — Aitemaad, Fori Qarza, Abhi, CashBazar, Daira
+    { url: `${SITE_URL}/blog/aitemaad-loan-clear-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${SITE_URL}/blog/fori-qarza-loan-clear-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${SITE_URL}/blog/abhi-app-loan-clear-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${SITE_URL}/blog/cashbazar-loan-clear-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${SITE_URL}/blog/daira-loan-clear-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
     // New batch — bank default + SECP + blacklist + multiple loans
     { url: `${SITE_URL}/blog/bank-loan-default-kya-hota-hai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog/secp-registered-loan-apps-list-2025`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
