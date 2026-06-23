@@ -7,6 +7,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE_URL}/blog/what-is-loan-clearance-service`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/blog/loan-app-harassment-calls-band-karna`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    // New batch — bank default + SECP + blacklist + multiple loans
+    { url: `${SITE_URL}/blog/bank-loan-default-kya-hota-hai`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/blog/secp-registered-loan-apps-list-2025`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/blog/loan-app-blacklist-naam-kaise-hataen`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/blog/multiple-loan-apps-kaise-manage-karein`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     // Informational high-traffic posts
     { url: `${SITE_URL}/blog/loan-app-contacts-access-kyon`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/blog/loan-app-ghar-aa-jayen-kya-karein`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },

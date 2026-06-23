@@ -18,6 +18,43 @@ export const metadata: Metadata = {
 };
 
 const POSTS = [
+  // --- New batch: high-intent informational ---
+  {
+    slug: 'bank-loan-default-kya-hota-hai',
+    title: 'Bank Loan Default Ke Baad Kya Hota Hai Pakistan Mein?',
+    excerpt: 'Arrest hogi? CNIC block hogi? Ghar jaayega? Bank loan default ke real consequences, myths vs facts, aur is situation se kaise niklen — honest complete guide.',
+    date: '2026-06-24',
+    category: 'Bank Default',
+    categoryColor: '#44403c',
+    readTime: '7 min',
+  },
+  {
+    slug: 'secp-registered-loan-apps-list-2025',
+    title: 'SECP Registered Loan Apps Ki List 2026 — Kon Si Legal Hai, Kon Si Nahin',
+    excerpt: 'Pakistan mein kaunsi loan apps SECP registered hain aur kaunsi illegal? Loan lene se pehle zaroor check karein — complete verified list aur explanation.',
+    date: '2026-06-24',
+    category: 'Authority Guide',
+    categoryColor: '#0f3460',
+    readTime: '7 min',
+  },
+  {
+    slug: 'loan-app-blacklist-naam-kaise-hataen',
+    title: 'Loan App Blacklist Se Apna Naam Kaise Hataen Pakistan Mein',
+    excerpt: 'eCIB default record se naam hatane ka sahi tarika kya hai? Shortcuts kaam nahi karte — yeh guide aapko real, step-by-step process batati hai Pakistan mein.',
+    date: '2026-06-24',
+    category: 'Credit Clearing',
+    categoryColor: '#991b1b',
+    readTime: '7 min',
+  },
+  {
+    slug: 'multiple-loan-apps-kaise-manage-karein',
+    title: 'Ek Saath Kai Loan Apps Se Qarz — Kaise Manage Karein',
+    excerpt: 'Multiple loan apps mein phanse hain? Priority kya ho, kaunsa pehle clear karein, aur kaise sab ek saath settle ho sakte hain — complete guide Pakistan mein.',
+    date: '2026-06-24',
+    category: 'Multiple Loans',
+    categoryColor: '#2d5986',
+    readTime: '8 min',
+  },
   // --- Informational (high-traffic) ---
   {
     slug: 'loan-app-contacts-access-kyon',
